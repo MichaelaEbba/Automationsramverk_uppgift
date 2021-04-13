@@ -1,0 +1,7 @@
+- hosts: web
+  tasks:
+  - name: 'Tar index filen från site mappen och lägger den på webbservern i /var/www/html'
+    copy:
+      src: webbsite/
+      dest: /var/www/{{ domain }}
+
